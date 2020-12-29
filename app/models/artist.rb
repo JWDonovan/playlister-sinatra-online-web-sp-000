@@ -7,6 +7,8 @@ class Artist < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    Artist.all.find{|artist| artist.slug == slug}
+    Artist.all.find do |artist|
+      artist.slug == slug
+    end
   end
 end
