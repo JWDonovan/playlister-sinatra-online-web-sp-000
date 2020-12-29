@@ -4,8 +4,11 @@ class SongsController < ApplicationController
     erb :"songs/index"
   end
 
-  get "/genres/:slug" do
-    @genre = Genre.find_by_slug(params[:slug])
-    erb :"genres/show"
+  get '/songs/new' do
+    erb :'/songs/new'
+  end
+
+  get "/songs/new" do
+    erb :"/songs/new"
   end
 end
